@@ -106,9 +106,9 @@ TopoBlender has a couple user settings that will allow you to change the look of
 - **samples** - number of samples the render enginer takes to resolve the render. Higher values will resolve a better image but will require more computation resources. default = 10
 
 ## TopoBlender
-If you are a bit more code savy, you can also run TopoBlender using a script. You will need to create a **parameters** file that contains information about the render settings, camera settings, and fileIO. The parameters are the same as the ones listed above. The **parameters** file needs to be saved in the **/TopoBlender/parameters** folder. You will either run this script through command prompt (windows) or terminal (linux/MacOS). If you use a script file (.sh) or a batch file (.bat) you will need to specify the following.
+If you are a bit more code savy, you can also run TopoBlender using a script. You will need to create a **parameters** file that contains information about the render settings, camera settings, and fileIO. The parameters are the same as the ones listed above. The **parameters** file needs to be saved in the **/TopoBlender/parameters** folder. You will either run the code using command prompt (windows) or terminal (linux/MacOS). If you use a script file (.sh) or a batch file (.bat) you will need to specify the following.
 
-### Script File Example (.sh)
+### Script File Example (.sh) (Linux/MacOS)
 ```
    #!/bin/bash
 
@@ -130,7 +130,7 @@ If you are a bit more code savy, you can also run TopoBlender using a script. Yo
    ./Blender -b -P $TopoBlender_location/TopoBlender.py -- $TopoBlender_location/parameters/$parameter
 ```
 
-### Batch File Example (.bat)
+### Batch File Example (.bat) (Windows)
 ```
    @echo off
    :: USER SPECIFIED
