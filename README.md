@@ -151,7 +151,7 @@ If you are a bit more code savy, you can also run TopoBlender using a script. Yo
    blender.exe -b -P %TopoBlender_location%/TopoBlender.py -- %TopoBlender_location%/parameters/%parameter%
 ```
 
-The included [script](https://github.com/jeffskwang/TopoBlender/blob/main/_render_script_example.sh) and [batch](https://github.com/jeffskwang/TopoBlender/blob/main/_render_script_example.bat) will render three higher-quality images.
+The included [script](https://github.com/jeffskwang/TopoBlender/blob/main/_render_script_example.sh) and [batch](https://github.com/jeffskwang/TopoBlender/blob/main/_render_script_example.bat) files will render three higher-quality images:
 - [**trout_creek_ortho.png**](https://github.com/jeffskwang/TopoBlender/blob/925d863da14f670f595d5430afd5ec20c3487566/renders/trout_creek_ortho.png) - An image taken at an oblique angle using an orthographic camera.
 - [**trout_creek_persp.png**](https://github.com/jeffskwang/TopoBlender/blob/925d863da14f670f595d5430afd5ec20c3487566/renders/trout_creek_persp.png) - An image taken at an oblique angle using an perspective camera. A shallow depth of field is used to create a more "artistic" style where the close and far regions are slightly out of focus. 
 - [**trout_creek_hillshade.png**](https://github.com/jeffskwang/TopoBlender/blob/925d863da14f670f595d5430afd5ec20c3487566/renders/trout_creek_hillshade.png) - An image taken at a planform view using an orthographic camera, creating a hillshade map. The sun altitude is 15 degrees and the sun azimuth is 315 degrees (sun in the NW) a default value for most hillshade algorithms.
