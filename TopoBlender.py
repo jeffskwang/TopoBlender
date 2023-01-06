@@ -8,6 +8,9 @@ import importlib
 import sys
 import os
 
+#Adding the parameters folder to the list of folders that python looks for 
+#module files in. Also, imports the parameter file. Add additional arguments
+#if you want to modify the code to go through a batch of files.
 argv = sys.argv
 argv = argv[argv.index("--") + 1:] 
 module_file = argv[0]
