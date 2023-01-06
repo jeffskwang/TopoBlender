@@ -84,16 +84,16 @@ TopoBlender has a couple user settings that will allow you to change the look of
 - **camera_type** - type of camera to use. 'orthogonal' or 'perspective'
 - **camera_tilt** - camera tilt in degrees. 0 degrees = side view, 90 degrees = top view
 - **camera_rotation** - camera rotational location in degrees (CW from North). 0 degrees = camera shoots from the North, 180 degrees = camera shoots from the South
-##### Orthogonal Camera
-- **ortho_scale** - decides how "zoomed" in or out the camera is. default = 1.0
-##### Perspective Camera
-- **focal_length** = decides how "zoomed" in or out the camera is. default = 50mm
-- **f_stop** - changes the depth of field (dof). Use low values to get the "portrait mode effect" (blurry effect). low values = shallow dof, high values = wide dof
-- **shift_x** - shifts the camera horizontally if the topography is not centered to your liking
-- **shift_y** - shifts the camera vertically if the topography is not centered to your liking
+- **Orthogonal Camera**
+   - **ortho_scale** - decides how "zoomed" in or out the camera is. default = 1.0
+- **Perspective Camera**
+   - **focal_length** = decides how "zoomed" in or out the camera is. default = 50mm
+   - **f_stop** - changes the depth of field (dof). Use low values to get the "portrait mode effect" (blurry effect). low values = shallow dof, high values = wide dof
+   - **shift_x** - shifts the camera horizontally if the topography is not centered to your liking
+   - **shift_y** - shifts the camera vertically if the topography is not centered to your liking
 #### Sun Properties
-- **sun_tilt** - sun altitude; sun angle in degrees from horizon. 0 degree = sunset, 90 degrees = noontime
-- **sun_rotation** - solar azimuth angle; sun rotational location in degrees (CW from North).  degrees = sun in the North, 180 degrees = sun in the South
+- **sun_tilt** - [sun altitude](https://pro.arcgis.com/en/pro-app/latest/tool-reference/3d-analyst/how-hillshade-works.htm). 0 degree = sunset, 90 degrees = noontime
+- **sun_rotation** - [solar azimuth angle](https://pro.arcgis.com/en/pro-app/latest/tool-reference/3d-analyst/how-hillshade-works.htm). 0 degrees = sun in the North, 180 degrees = sun in the South
 - **sun_intensity** -  intensity the sunlight is. default = 0.1
 
 #### Landscape Properties
