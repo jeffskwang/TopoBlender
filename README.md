@@ -9,12 +9,17 @@ Python script that renders images of topography using Blender
 - Blender - a free and open-source software used to render 3D scenes
 
 ## What do rendered images look like?
-Topography viewed from an oblique angle.
 <p align="center">
-<img src="https://github.com/jeffskwang/TopoBlender/blob/7f9317b485e64b394df67d7b2428c4a3794cfca3/readme_images/trout_creek_ortho_low_res.png" alt="rendered topography with orthographic view" width="500"/>
-
-Topography viewed from a top-down view, like a hillshade map.
-<img src="https://github.com/jeffskwang/TopoBlender/blob/7f9317b485e64b394df67d7b2428c4a3794cfca3/readme_images/trout_creek_hillshade_low_res.png" alt="rendered topography with hillshade view" width="500"/>
+   <img src="https://github.com/jeffskwang/TopoBlender/blob/7f9317b485e64b394df67d7b2428c4a3794cfca3/readme_images/trout_creek_ortho_low_res.png" alt="rendered topography with orthographic view" width="500"/>
+</p>
+<p align="center">
+Fig.1 - Topography viewed from an oblique angle.
+</p>
+<p align="center">
+   <img src="https://github.com/jeffskwang/TopoBlender/blob/7f9317b485e64b394df67d7b2428c4a3794cfca3/readme_images/trout_creek_hillshade_low_res.png" alt="rendered topography with hillshade view" width="500"/>
+</p>
+<p align="center">
+Fig.2 - Topography viewed from a bird's-eye view, a hillshade map.
 </p>
 
 ## What will you need
