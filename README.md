@@ -71,5 +71,6 @@ After click **Viewport Shading** you will now see a preview of the render!
 
 You can also see a higher fidelity render in the TopoBlender/renders folder. If you are running the example, the file is named **trout_creek.png**, also found [here](https://github.com/jeffskwang/TopoBlender/blob/70572a57dea077ac8ff8e97ab6b1135b66aadc4b/renders/trout_creek.png).
 
-
+## TopoBlender
+If you are a bit more code savy, you can also run TopoBlender using a script. TopoBlender 
 
