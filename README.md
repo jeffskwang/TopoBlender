@@ -80,36 +80,30 @@ TopoBlender has a couple user settings that will allow you to change the look of
 - **datafile** - path to the input .asc file containing the DEM
 - **output** - path to the output .png file of the render
 - **GPU_boolean** - setting that allows you to use a GPU (if you have one) to speed up the render. 0 = CPU, 1 = GPU
-#### Camera
+#### Camera Properties
 - **camera_type** - type of camera to use. 'orthogonal' or 'perspective'
+- **camera_tilt** - camera tilt in degrees. 0 degrees = side view, 90 degrees = top view
+- **camera_rotation** - camera rotational location in degrees (CW from North). 0 degrees = camera shoots from the North, 180 degrees = camera shoots from the South
 ##### Orthogonal Camera
 - **ortho_scale** - decides how "zoomed" in or out the camera is. default = 1.0
 ##### Perspective Camera
 - **focal_length** = decides how "zoomed" in or out the camera is. default = 50mm
-- **f_stop** - changes the depth of field
-- **shift_x** = 0.0 # you may need to shift the camera to center the topo in the frame
-- **shift_y** = -0.05 # you may need to shift the camera to center the topo in the frame
+- **f_stop** - changes the depth of field (dof). Use low values to get the "portrait mode effect" (blurry effect). low values = shallow dof, high values = wide dof
+- **shift_x** - shifts the camera horizontally if the topography is not centered to your liking
+- **shift_y** - shifts the camera vertically if the topography is not centered to your liking
+#### Sun Properties
+- **sun_tilt** - sun altitude; sun angle in degrees from horizon. 0 degree = sunset, 90 degrees = noontime
+- **sun_rotation** - solar azimuth angle; sun rotational location in degrees (CW from North).  degrees = sun in the North, 180 degrees = sun in the South
+- **sun_intensity** -  intensity the sunlight is. default = 0.1
 
-#camera location
-camera_tilt = 45.0 #degrees from horizontal
-camera_rotation = 45.0 #camera location degrees CW from North
-######################################
+#### Landscape Properties
+- **number_of_subdivisions** - number of subdivisions, effectively settings the landscape resolution. Increasing this value will make the landscape more detailed but will require more computation resources to render. default = 500
+- **exaggeration** - amount of vertical exaggeration to make relief more visable. default = 2.0
 
-##########sun properties##############
-sun_tilt = 15.0 #degrees from horizontal
-sun_rotation = 135.0 #degrees CW from North
-sun_intensity = 0.1 #sun intensity
-######################################
-
-#####landscape representation#########
-number_of_subdivisions = 500 #number of subvisions, more increases the detail
-exaggeration = 2.0 #vertical exaggeration
-######################################
-
-#########render settings##############
-res_x = 1600 #x resolution of the render
-res_y = 1412 #y resolution of the render
-samples = 10 
+#### Render Properties
+- **res_x** - horizontal resolution of image render
+- **res_y** - vertical resolution of image render
+- **samples** - number of samples the render enginer takes to resolve the render. Higher values will resolve a better image but will require more computation resources. default = 10
 
 ## TopoBlender
 If you are a bit more code savy, you can also run TopoBlender using a script. You will need to create a **parameters** file that contains information about the render settings, camera settings, and fileIO.
