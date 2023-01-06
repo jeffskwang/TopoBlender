@@ -16,8 +16,9 @@ Python script to render images of topography using Blender
 
 ## What will you need
 1. [Blender](https://www.blender.org/download/)
-2. A way to convert your digital elevation models (DEMs) to [ASCII format](https://desktop.arcgis.com/en/arcmap/latest/manage-data/raster-and-images/esri-ascii-raster-format.htm) (.asc).
+2. A way to convert your digital elevation models (DEMs) to [ASCII format](https://desktop.arcgis.com/en/arcmap/latest/manage-data/raster-and-images/esri-ascii-raster-format.htm) (.asc), e.g., [GDAL](https://gdal.org/), [QGIS](https://qgis.org/en/site/), ArcGIS.
 3. *Optional* A GPU will allow the render engine to work faster
 4. Inputs
+  * .tif file of your DEM (located in TopoBlender/data folder), this needs to be converted to .asc
   * .asc file of your DEM (located in TopoBlender/converted folder)
   * .py file of your render settings (located in TopoBlender/parameters folder)
