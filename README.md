@@ -1,5 +1,5 @@
 # TopoBlender
-Python script to render images of topography using Blender
+Python script that renders images of topography using Blender
 
 ## What does this mean?
 - Python - a coding language
