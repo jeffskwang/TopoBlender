@@ -51,13 +51,13 @@ You will get the spinning wheel cursor, indicating the code is running. Just wai
 <img src="https://github.com/jeffskwang/TopoBlender/blob/5a394780c97979234d8a0c5733489a84f56fefd9/readme_images/UI_3.png" alt="Layout Tab" width="400"/>
 </p>
 
-The cube will be gone and you will now see a small flat plane. This is your topography. To view the topography from the render's camera view, click the **Camera View** button.
+The cube will be gone, and you will now see a small flat plane. This is your topography. To view the topography from the render's camera view, click the **Camera View** button.
 
 <p align="center">
 <img src="https://github.com/jeffskwang/TopoBlender/blob/5a394780c97979234d8a0c5733489a84f56fefd9/readme_images/UI_4.png" alt="Camera View Button" width="400"/>
 </p>
 
-This will show you the plane that we created that holds the topography data, but you will not see any relief in the topograpghy. To see that you, will need to preview the render by click the **Viewport Shading** button the top-right corner of the viewport.
+This will show you the plane that we created that holds the topography data, but you will not see any relief in the topography. To see that you, will need to preview the render by click the **Viewport Shading** button the top-right corner of the viewport.
 
 <p align="center">
 <img src="https://github.com/jeffskwang/TopoBlender/blob/5a394780c97979234d8a0c5733489a84f56fefd9/readme_images/UI_5.png" alt="Viewport Shading Button" width="400"/>
@@ -103,10 +103,10 @@ TopoBlender has a couple user settings that will allow you to change the look of
 #### Render Properties
 - **res_x** - horizontal resolution of image render
 - **res_y** - vertical resolution of image render
-- **samples** - number of samples the render enginer takes to resolve the render. Higher values will resolve a better image but will require more computation resources. default = 10
+- **samples** - number of samples the render engine takes to resolve the render. Higher values will resolve a better image but will require more computation resources. default = 10
 
-## TopoBlender
-If you are a bit more code savy, you can also run TopoBlender using a script. You will need to create a **parameters** file that contains information about the render settings, camera settings, and fileIO. The parameters are the same as the ones listed above. The **parameters** file needs to be saved in the **/TopoBlender/parameters** folder. You will either run the code using command prompt (windows) or terminal (linux/MacOS). If you use a script file (.sh) or a batch file (.bat) you will need to specify the following.
+## TopoBlender using Command Line
+If you are a bit more code savvy, you can also run TopoBlender using a script. You will need to create a **parameters** file that contains information about the render settings, camera settings, and fileIO. The parameters are the same as the ones listed above. The **parameters** file needs to be saved in the **/TopoBlender/parameters** folder. You will either run the code using command prompt (windows) or terminal (linux/MacOS). If you use a script file (.sh) or a batch file (.bat) you will need to specify the following.
 
 ### Script File Example (.sh) (Linux/MacOS)
 ```
