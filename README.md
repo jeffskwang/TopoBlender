@@ -19,9 +19,9 @@ Python script to render images of topography using Blender
 2. A way to convert your digital elevation models (DEMs) to [ASCII format](https://desktop.arcgis.com/en/arcmap/latest/manage-data/raster-and-images/esri-ascii-raster-format.htm) (.asc), e.g., [GDAL](https://gdal.org/), [QGIS](https://qgis.org/en/site/), ArcGIS.
 3. *Optional* - A GPU will allow the render engine (CYCLES) to run faster
 4. Inputs
-    * .tif file of your DEM (located in TopoBlender/data folder), this needs to be converted to .asc
-    * .asc file of your DEM (located in TopoBlender/converted folder)
-    * .py file of your render settings (located in TopoBlender/parameters folder)
+    * .tif file of your DEM (located in **/TopoBlender/data** folder), this needs to be converted to .asc
+    * .asc file of your DEM (located in **/TopoBlender/converted** folder)
+    * .py file of your render settings (located in **/TopoBlender/parameters** folder)
 
 ## Converting .tif to .asc
 In order for Blender to run without additional installations, TopoBlender requires the input DEM to have a ASCII file format (.asc). To convert your DEM to this format, I recommend **gdal\_translate** in GDAL. An example script file (**convert_tif\_to\_asc\_example.sh**) is included. The script file assumes that GDAL is installed within an [Anaconda Environment](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html). Last, in addition to .tif files, GDAL can also convert other DEM filetypes to .asc.
@@ -69,7 +69,7 @@ After click **Viewport Shading** you will now see a preview of the render!
 <img src="https://github.com/jeffskwang/TopoBlender/blob/5a394780c97979234d8a0c5733489a84f56fefd9/readme_images/UI_6.png" alt="Render Preview" width="600"/>
 </p>
 
-You can also see a higher fidelity render in the TopoBlender/renders folder. If you are running the example, the file is named **trout_creek.png**, also found [here](https://github.com/jeffskwang/TopoBlender/blob/70572a57dea077ac8ff8e97ab6b1135b66aadc4b/renders/trout_creek.png).
+You can also see a higher fidelity render in the **/TopoBlender/renders folder**. If you are running the example, the file is named **trout_creek.png**, also found [here](https://github.com/jeffskwang/TopoBlender/blob/925d863da14f670f595d5430afd5ec20c3487566/renders/trout_creek.png).
 
 ## Changing the Render Settings
 TopoBlender has a couple user settings that will allow you to change the look of the rendered image. You can also use this code as a template and improve/modify it for your uses. I hope that this code can help get you started!
@@ -94,7 +94,7 @@ TopoBlender has a couple user settings that will allow you to change the look of
 #### Sun Properties
 - **sun_tilt** - [sun altitude](https://pro.arcgis.com/en/pro-app/latest/tool-reference/3d-analyst/how-hillshade-works.htm). 0 degree = sunset, 90 degrees = noontime
 - **sun_rotation** - [solar azimuth angle](https://pro.arcgis.com/en/pro-app/latest/tool-reference/3d-analyst/how-hillshade-works.htm). 0 degrees = sun in the North, 180 degrees = sun in the South
-- **sun_intensity** -  intensity the sunlight is. default = 0.1
+- **sun_intensity** -  intensity the sunlight. default = 0.1
 
 #### Landscape Properties
 - **number_of_subdivisions** - number of subdivisions, effectively settings the landscape resolution. Increasing this value will make the landscape more detailed but will require more computation resources to render. default = 500
@@ -106,5 +106,54 @@ TopoBlender has a couple user settings that will allow you to change the look of
 - **samples** - number of samples the render enginer takes to resolve the render. Higher values will resolve a better image but will require more computation resources. default = 10
 
 ## TopoBlender
-If you are a bit more code savy, you can also run TopoBlender using a script. You will need to create a **parameters** file that contains information about the render settings, camera settings, and fileIO.
+If you are a bit more code savy, you can also run TopoBlender using a script. You will need to create a **parameters** file that contains information about the render settings, camera settings, and fileIO. The parameters are the same as the ones listed above. The **parameters** file needs to be saved in the **/TopoBlender/parameters** folder. You will either run this script through command prompt (windows) or terminal (linux/MacOS). If you use a script file (.sh) or a batch file (.bat) you will need to specify the following.
 
+### Script File Example (.sh)
+```
+   #!/bin/bash
+
+   ####USER SPECIFIED
+   #Paramter File 
+   parameter=trout_creek_ortho_example
+
+   #Define locations of blender <--IMPORTANT, NEEDS TO BE UPDATED TO YOUR SYSTEM
+   blender_location=/Applications/Blender.app/contents/MacOS
+
+   ####AUTOMATED SECTION
+   #TopoBlender file is assumed to be in the same directory as this .sh file
+   TopoBlender_location=$(dirname $0)
+
+   #moves to blender location to run blender
+   cd $blender_location
+   
+   #Run TopoBlender
+   ./Blender -b -P $TopoBlender_location/TopoBlender.py -- $TopoBlender_location/parameters/$parameter
+```
+
+### Batch File Example (.bat)
+```
+   @echo off
+   :: USER SPECIFIED
+   :: Paramter File 
+   set parameter=trout_creek_ortho_example
+
+   :: Define locations of blender <--IMPORTANT, NEEDS TO BE UPDATED TO YOUR SYSTEM
+   set blender_location=C:\Program Files\Blender Foundation\Blender 3.4
+
+   :: AUTOMATED SECTION
+   :: TopoBlender file is assumed to be in the same directory as this .sh file
+   set TopoBlender_location=%cd%
+
+   :: moves to blender location to run blender
+   cd %blender_location%
+   
+   :: Run TopoBlender
+   blender.exe -b -P %TopoBlender_location%/TopoBlender.py -- %TopoBlender_location%/parameters/%parameter%
+```
+
+The included [script](https://github.com/jeffskwang/TopoBlender/blob/main/_render_script_example.sh) and [batch](https://github.com/jeffskwang/TopoBlender/blob/main/_render_script_example.bat) will render three higher-quality images.
+- [**trout_creek_ortho.png**](https://github.com/jeffskwang/TopoBlender/blob/925d863da14f670f595d5430afd5ec20c3487566/renders/trout_creek_ortho.png) - An image taken at an oblique angle using an orthographic camera.
+- [**trout_creek_persp.png**](https://github.com/jeffskwang/TopoBlender/blob/925d863da14f670f595d5430afd5ec20c3487566/renders/trout_creek_persp.png) - An image taken at an oblique angle using an perspective camera. A shallow depth of field is used to create a more "artistic" style where the close and far regions are slightly out of focus. 
+- [**trout_creek_hillshade.png**](https://github.com/jeffskwang/TopoBlender/blob/925d863da14f670f595d5430afd5ec20c3487566/renders/trout_creek_hillshade.png) - An image taken at a planform view using an orthographic camera, creating a hillshade map. The sun altitude is 15 degrees and the sun azimuth is 315 degrees (sun in the NW) a default value for most hillshade algorithms.
+
+That's it! I hope you have fun using Blender for fun and science!
