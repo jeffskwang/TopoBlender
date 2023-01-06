@@ -35,6 +35,11 @@ scn = bpy.context.scene
 if not scn.render.engine == 'CYCLES':
     scn.render.engine = 'CYCLES'
 
+#if cycles, change to gpu rendering if user selects GPU
+if scn.render.engine == 'CYCLES':
+    if GPU_boolean == 1:
+        scn.cycles.device = 'GPU'
+
 ################################################################################
 # read in .asc file
 data = np.loadtxt(datafile,skiprows=6)

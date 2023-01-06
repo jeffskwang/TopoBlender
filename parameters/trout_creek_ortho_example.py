@@ -2,6 +2,7 @@
 Topo_Blender_folder = "/Users/jeffreykwang/Documents/GitHub/TopoBlender" #IMPORTANT - THIS NEEDS TO POINT TO THE TOPOBLENDER FOLDER TO WORK
 datafile = Topo_Blender_folder + "/converted/trout_creek.asc"
 output = Topo_Blender_folder + "/renders/trout_creek_ortho.png"
+GPU_boolean = 0 #if you have a GPU, set this to 1 to accelerate the render speed
 #####################################
 
 
