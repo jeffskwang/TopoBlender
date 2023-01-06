@@ -71,6 +71,46 @@ After click **Viewport Shading** you will now see a preview of the render!
 
 You can also see a higher fidelity render in the TopoBlender/renders folder. If you are running the example, the file is named **trout_creek.png**, also found [here](https://github.com/jeffskwang/TopoBlender/blob/70572a57dea077ac8ff8e97ab6b1135b66aadc4b/renders/trout_creek.png).
 
+## Changing the Render Settings
+TopoBlender has a couple user settings that will allow you to change the look of the rendered image. You can also use this code as a template and improve/modify it for your uses. I hope that this code can help get you started!
+
+### Parameters
+#### Main Controls
+- **Topo_Blender_folder** - path to the TopoBlender folder
+- **datafile** - path to the input .asc file containing the DEM
+- **output** - path to the output .png file of the render
+- **GPU_boolean** - setting that allows you to use a GPU (if you have one) to speed up the render. 0 = CPU, 1 = GPU
+#### Camera
+- **camera_type** - type of camera to use. 'orthogonal' or 'perspective'
+##### Orthogonal Camera
+- **ortho_scale** - decides how "zoomed" in or out the camera is. default = 1.0
+##### Perspective Camera
+- **focal_length** = decides how "zoomed" in or out the camera is. default = 50mm
+- **f_stop** - changes the depth of field
+- **shift_x** = 0.0 # you may need to shift the camera to center the topo in the frame
+- **shift_y** = -0.05 # you may need to shift the camera to center the topo in the frame
+
+#camera location
+camera_tilt = 45.0 #degrees from horizontal
+camera_rotation = 45.0 #camera location degrees CW from North
+######################################
+
+##########sun properties##############
+sun_tilt = 15.0 #degrees from horizontal
+sun_rotation = 135.0 #degrees CW from North
+sun_intensity = 0.1 #sun intensity
+######################################
+
+#####landscape representation#########
+number_of_subdivisions = 500 #number of subvisions, more increases the detail
+exaggeration = 2.0 #vertical exaggeration
+######################################
+
+#########render settings##############
+res_x = 1600 #x resolution of the render
+res_y = 1412 #y resolution of the render
+samples = 10 
+
 ## TopoBlender
 If you are a bit more code savy, you can also run TopoBlender using a script. You will need to create a **parameters** file that contains information about the render settings, camera settings, and fileIO.
 
