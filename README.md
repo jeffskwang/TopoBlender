@@ -4,14 +4,17 @@ Python script that renders images of topography using Blender
 ## What does this mean?
 - Python - a coding language
 - script - a text file with code
-- render - a process of turning a 3D scene into a realistic 2D image, like taking a picture
+- render - a process of turning a 3D scene into a 2D image, like taking a picture
 - topography - the shape of the surface of Earth (or other planets)
 - Blender - a free and open-source software used to render 3D scenes
 
 ## What do rendered images look like?
+Topography viewed from an oblique angle.
 <p align="center">
-<img src="https://github.com/jeffskwang/TopoBlender/blob/7f9317b485e64b394df67d7b2428c4a3794cfca3/readme_images/trout_creek_ortho_low_res.png" alt="rendered topography with orthographic view" width="400"/>
-<img src="https://github.com/jeffskwang/TopoBlender/blob/7f9317b485e64b394df67d7b2428c4a3794cfca3/readme_images/trout_creek_hillshade_low_res.png" alt="rendered topography with hillshade view" width="400"/>
+<img src="https://github.com/jeffskwang/TopoBlender/blob/7f9317b485e64b394df67d7b2428c4a3794cfca3/readme_images/trout_creek_ortho_low_res.png" alt="rendered topography with orthographic view" width="500"/>
+
+Topography viewed from a top-down view, like a hillshade map.
+<img src="https://github.com/jeffskwang/TopoBlender/blob/7f9317b485e64b394df67d7b2428c4a3794cfca3/readme_images/trout_creek_hillshade_low_res.png" alt="rendered topography with hillshade view" width="500"/>
 </p>
 
 ## What will you need
