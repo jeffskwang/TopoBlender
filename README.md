@@ -119,7 +119,6 @@ If you are a bit more code savvy, you can also run TopoBlender using a script. Y
 ### Script File Example (.sh) (Linux/MacOS)
 ```
    #!/bin/bash
-
    ####USER SPECIFIED
    #Paramter File 
    parameter=trout_creek_ortho_example
