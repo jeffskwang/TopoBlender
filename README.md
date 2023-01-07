@@ -24,7 +24,7 @@ Fig.2 - Topography viewed from a bird's-eye view, a hillshade map.
 
 ## What will you need
 1. [Blender](https://www.blender.org/download/)
-2. A way to convert your digital elevation models (DEMs) to [ASCII format](https://desktop.arcgis.com/en/arcmap/latest/manage-data/raster-and-images/esri-ascii-raster-format.htm) (.asc), e.g., [GDAL](https://gdal.org/), [QGIS](https://qgis.org/en/site/), ArcGIS.
+2. DEMs in [ASCII format](https://desktop.arcgis.com/en/arcmap/latest/manage-data/raster-and-images/esri-ascii-raster-format.htm) (.asc). DEMs in this format can be downloaded directly from [OpenTopography](https://opentopography.org/) or can be generated from [landlab-based](https://landlab.readthedocs.io/en/master/reference/io/esri_ascii.html#landlab.io.esri_ascii.write_esri_ascii) models. If you have .tifs or other formats, you will need a way to convert your digital elevation models (DEMs) to ASCII format, e.g., [GDAL](https://gdal.org/), [QGIS](https://qgis.org/en/site/), ArcGIS.
 3. *Optional* - A GPU will allow the render engine (CYCLES) to run faster
 4. Inputs
     * .tif file of your DEM (located in **/TopoBlender/data** folder), this needs to be converted to .asc
@@ -32,7 +32,7 @@ Fig.2 - Topography viewed from a bird's-eye view, a hillshade map.
     * .py file of your render settings (located in **/TopoBlender/parameters** folder)
 
 ## Converting .tif to .asc
-In order for Blender to run without additional installations, TopoBlender requires the input DEM to have a ASCII file format (.asc). To convert your DEM to this format, I recommend **gdal\_translate** in GDAL. An example script file (**convert_tif\_to\_asc\_example.sh**) is included. The script file assumes that GDAL is installed within an [Anaconda Environment](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html). Last, in addition to .tif files, GDAL can also convert other DEM filetypes to .asc.
+In order for Blender to run without additional installations, TopoBlender requires the input DEM to have a ASCII file format. If you need to convert your DEM to this format, I recommend **gdal\_translate** in GDAL. An example script file (**convert_tif\_to\_asc\_example.sh**) is included. The script file assumes that GDAL is installed within an [Anaconda Environment](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html). Last, in addition to .tif files, GDAL can also convert other DEM filetypes to .asc.
 
 ## TopoBlender UI
 TopoBlender can be used with the Blender UI. It is as simple as opening the **TopoBlenderUI.blend** file with Blender. You will be greeted with the following window. You will see a viewport of a cube, the default starting polygon in Blender, and a code window.
