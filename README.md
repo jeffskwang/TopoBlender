@@ -124,7 +124,7 @@ If you are a bit more code savvy, you can also run TopoBlender using a script. Y
 ```
    #!/bin/bash
    ####USER SPECIFIED
-   #Paramter File 
+   #Parameter File 
    parameter=trout_creek_ortho_example
 
    #Define locations of blender <--IMPORTANT, NEEDS TO BE UPDATED TO YOUR SYSTEM
@@ -145,7 +145,7 @@ If you are a bit more code savvy, you can also run TopoBlender using a script. Y
 ```
    @echo off
    :: USER SPECIFIED
-   :: Paramter File 
+   :: Parameter File 
    set parameter=trout_creek_ortho_example
 
    :: Define locations of blender <--IMPORTANT, NEEDS TO BE UPDATED TO YOUR SYSTEM

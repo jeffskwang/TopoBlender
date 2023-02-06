@@ -67,8 +67,8 @@ relief = data_max - data_min
 data[data!=nodata_value] = (data[data!=nodata_value] - data_min) / relief
 #convert nodata value to nan
 data[data==nodata_value] = np.nan
-# data y_length we use this to scale the topography
-y_length = (2.0+float(data.shape[1])) * dx 
+# data x_length we use this to scale the topography
+x_length = (2.0+float(data.shape[1])) * dx 
 # create an image that holds the data
 displacement_array = np.zeros(((data.shape[0]+2)*(data.shape[1]+2)*4), dtype=np.float32)
 color_array = np.zeros(((data.shape[0]+2)*(data.shape[1]+2)*4), dtype=np.float32)
@@ -151,7 +151,7 @@ color_image_node.image.colorspace_settings.name="Linear"
     
 #add displacement node - done
 displacement_node = topo_mat.node_tree.nodes.new("ShaderNodeDisplacement")
-displacement_node.inputs.get("Scale").default_value = exaggeration * plane_size * relief / y_length
+displacement_node.inputs.get("Scale").default_value = exaggeration * plane_size * relief / x_length
 displacement_node.inputs.get("Midlevel").default_value = 0.0
 
 #add world sky - done
