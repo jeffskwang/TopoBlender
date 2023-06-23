@@ -190,6 +190,11 @@ topo_mat.node_tree.links.new(displacement_node.outputs["Displacement"], \
 topo_mat.node_tree.links.new(color_image_node.outputs["Color"], \
                              topo_mat.node_tree.nodes["Principled BSDF"].inputs[0])
 
+#change material properties
+topo_mat.node_tree.nodes['Principled BSDF'].inputs.get('Specular').default_value = 0.0
+topo_mat.node_tree.nodes['Principled BSDF'].inputs.get('Emission Strength').default_value = 0.0
+topo_mat.node_tree.nodes['Principled BSDF'].inputs.get('Roughness').default_value = 1.0
+
 bpy.context.scene.collection.objects.link(cam_obj)                         
 bpy.context.scene.camera = cam_obj    
 bpy.context.scene.world = topo_world
