@@ -1,3 +1,4 @@
+[![CSDMS TWG Spotlight](https://custom-icon-badges.demolab.com/badge/CSDMS-TWG_Spotlight-2473c2?logo=csdms&style=for-the-badge)](https://csdms.colorado.edu/wiki/TWG_Member_Award)
 # TopoBlender
 Python script that renders images of topography using Blender
 
